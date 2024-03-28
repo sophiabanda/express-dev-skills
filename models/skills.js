@@ -1,6 +1,6 @@
 module.exports = {
     getAll,
-    
+    getOne,
 }
 
 const developerSkills = [
@@ -13,4 +13,8 @@ const developerSkills = [
 
 function getAll() {
     return developerSkills;
+}
+
+function getOne(skillParam) {
+    return developerSkills.find((s) => s.skill === skillParam);
 }

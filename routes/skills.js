@@ -6,6 +6,8 @@ var skillsController = require('../controllers/skills');
 
 // GET List of Skills
 router.get('/', skillsController.index)
+// GET One Skill
+router.get('/:skill', skillsController.show)
 
 
 module.exports = router;
