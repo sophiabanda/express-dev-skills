@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <%- include('../partials/header') %>
+    <body>
+    <%- include('../partials/navbar') %>
+        <h1><%= title %></h1>
+        <h2>Skill: <%= skill.skill %></h2>
+        <h3>Proficiency: <%= skill.proficiency %></h3>
+        <form action='/skills/<%= skill.skill %>?_method=PUT' method='POST'>
+            <input type='text' name='skill' placeholder='<%= skill.skill %>'/>
+            <button type='submit'>Update</button>
+        </form>
+        <form name='proficiency' action='/skills/<%= skill.proficiency %>?_method=PUT' method='POST'>
+            <select name='proficiency'>
+                <option value='Beginner'>Beginner</option>
+                <option value='Intermediate'>Intermediate</option>
+                <option value='Experienced'>Experienced</option>
+                <option value='Advanced'>Advanced</option>
+                <option value='Master'>Master</option>
+            </select>
+            <button type='submit'>Update</button>
+          </form>
+    </body>
+</html>

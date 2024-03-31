@@ -2,7 +2,8 @@ module.exports = {
     getAll,
     getOne,
     create,
-    deleteOne
+    deleteOne,
+    update
 }
 
 const developerSkills = [
@@ -26,8 +27,12 @@ function create(skill) {
 }
 
 function deleteOne(skill) {
-    skill.deleteOne(req.params.skill);
     // Find the index of the skill
     const idx = developerSkills.findIndex(skill => skill.skill === skill);
     developerSkills.splice(idx, 1)
+}
+
+function update(skill, updatedSkill) {
+    const skillToUpdate = developerSkills.find((s) => s.skill === skill);
+    Object.assign(skillToUpdate, updatedSkill)
 }
