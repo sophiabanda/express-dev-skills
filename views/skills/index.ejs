@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <%- include('../partials/header') %>
     <body>
     <%- include('../partials/navbar') %>
@@ -9,7 +9,8 @@
             <li>
                 <a href='/skills/<%= s.skill %>'><%= s.skill %></a>
             </li>
-          <% }) %>
-        </ul> 
+            <% }) %>
+          </ul> 
+          <a href="/skills/new">Add New Skill</a>
     </body>
 </html>

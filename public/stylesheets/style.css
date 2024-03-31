@@ -1,13 +1,18 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: grid;
 }
 
 a {
-  color: #00B7FF;
+  color: #50caf7;
 }
 
 nav li {
   list-style: none;
   display: inline;
+}
+
+h1 {
+  text-align: center;
 }
