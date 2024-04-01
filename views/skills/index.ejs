@@ -7,7 +7,8 @@
         <ul>
           <% skills.forEach((s) => { %>
             <li>
-                <a href='/skills/<%= s.id %>'><%= s.skill %> - <%= s.proficiency ? s.proficiency : '(add skill level)' %></a>
+                <a style='font-size: 25px;' href='/skills/<%= s.id %>'><%= s.skill %> 
+                <span style='color: lightgrey;'> -<%= s.proficiency ?  s.proficiency : '(add skill level)' %></a></span>  
             </li>
             <% }) %>
           </ul> 
