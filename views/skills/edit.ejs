@@ -5,11 +5,12 @@
     <%- include('../partials/navbar') %>
         <h1><%= title %></h1>
         <h2>Skill: <%= skill.skill %></h2>
+        <h4>Proficiency: <%= skill.proficiency %></h4>
         <form action='/skills/<%= skill.id %>?_method=PUT' method='POST'>
             <input type='text' name='skill' placeholder='<%= skill.skill %>'/>
             <button type='submit'>Update</button>
         </form><br>
-        <!-- <form name='proficiency' action='/skills/<%= skill.proficiency %>?_method=PUT' method='POST'>
+        <form action='/skills/<%= skill.id %>?_method=PUT' method='POST'>
             <select name='proficiency'>
                 <option value='Beginner'>Beginner</option>
                 <option value='Intermediate'>Intermediate</option>
@@ -18,6 +19,6 @@
                 <option value='Master'>Master</option>
             </select>
             <button type='submit'>Update</button>
-          </form> -->
+          </form>
     </body>
 </html>

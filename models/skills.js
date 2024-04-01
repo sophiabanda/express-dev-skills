@@ -7,11 +7,11 @@ module.exports = {
 }
 
 const developerSkills = [
-    {id: 100123, skill: 'HTML'},
-    {id: 100124, skill: 'CSS'},
-    {id: 100125, skill: 'Javascript'},
-    {id: 100126, skill: 'Node.js'},
-    {id: 100127, skill: 'Express.js'},
+    {id: 100123, skill: 'HTML', proficiency: 'Beginner'},
+    {id: 100124, skill: 'CSS', proficiency: ''},
+    {id: 100125, skill: 'Javascript', proficiency: 'Intermediate'},
+    {id: 100126, skill: 'Node.js', proficiency: 'Intermediate'},
+    {id: 100127, skill: 'Express.js', proficiency: ''},
 ]
 
 function getAll() {
