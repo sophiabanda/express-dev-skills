@@ -14,16 +14,16 @@ router.get('/new', skillsController.new); //---> Define before show or will erro
 router.post('/', skillsController.create);
 
 // GET /skills/edit - Page to edit skill
-router.get('/:skill/edit', skillsController.edit)
+router.get('/:id/edit', skillsController.edit)
 
-// GET /skills/:skill - One Skill
-router.get('/:skill', skillsController.show);
+// GET /skills/:id - One Skill
+router.get('/:id', skillsController.show);
 
-// DELETE /skills/:skill - One Skill
-router.delete('/:skill', skillsController.delete);
+// DELETE /skills/:id - One Skill
+router.delete('/:id', skillsController.delete);
 
-// PUT /skills/:skill
-router.put('/:skill', skillsController.update);
+// PUT /skills/:id
+router.put('/:id', skillsController.update);
 
 
 module.exports = router;

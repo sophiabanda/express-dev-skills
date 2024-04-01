@@ -7,32 +7,37 @@ module.exports = {
 }
 
 const developerSkills = [
-    {skill: 'HTML', proficiency: 'Professional'},
-    {skill: 'CSS', proficiency: 'Aspiring Professional'},
-    {skill: 'Javascript', proficiency: 'Master, obviously...'},
-    {skill: 'Node.js', proficiency: 'Beginner'},
-    {skill: 'Express.js', proficiency: 'Never heard of it'},
+    {id: 100123, skill: 'HTML'},
+    {id: 100124, skill: 'CSS'},
+    {id: 100125, skill: 'Javascript'},
+    {id: 100126, skill: 'Node.js'},
+    {id: 100127, skill: 'Express.js'},
 ]
 
 function getAll() {
+    console.log(developerSkills)
     return developerSkills;
 }
 
-function getOne(skillParam) {
-    return developerSkills.find((s) => s.skill === skillParam);
+function getOne(id) {
+    id = parseInt(id);
+    return developerSkills.find((skill) => skill.id === id);
 }
 
 function create(skill) {
+    skill.id = Date.now() % 1000000;
+    skill.proficiency = 'Beginner';
     developerSkills.push(skill);
 }
 
-function deleteOne(skill) {
+function deleteOne(id) {
     // Find the index of the skill
-    const idx = developerSkills.findIndex(skill => skill.skill === skill);
+    const idx = developerSkills.findIndex(skill => skill.id === id);
     developerSkills.splice(idx, 1)
 }
 
-function update(skill, updatedSkill) {
-    const skillToUpdate = developerSkills.find((s) => s.skill === skill);
-    Object.assign(skillToUpdate, updatedSkill)
+function update(id, udpatedSkill) {
+    id = parseInt(id);
+    const skill = developerSkills.find((skill) => skill.id === id);
+    Object.assign(skill, udpatedSkill);
 }
